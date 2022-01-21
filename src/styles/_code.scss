@@ -1,0 +1,30 @@
+body {
+  &[data-theme='light'] {
+    @import '~prismjs/themes/prism';
+  }
+
+  &[data-theme='dark'] {
+    @import '~prismjs/themes/prism-tomorrow';
+  }
+}
+
+code {
+  padding: 0.2em 0.5em;
+  border-radius: 0.2em;
+  background-color: var(--color-bg-code);
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 0.8em;
+}
+
+pre {
+  margin-bottom: 2em !important;
+  padding: calc(var(--gap) / 2) !important;
+  border-radius: 0.2em;
+  background-color: var(--color-bg-code) !important;
+  font-size: 0.8em !important;
+
+  code {
+    color: var(--color-text) !important;
+    text-shadow: none !important;
+  }
+}
