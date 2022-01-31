@@ -2,6 +2,8 @@
   "name": "hrynko.github.io",
   "scripts": {
     "build": "gridsome build",
+    "predeploy": "gridsome build",
+    "deploy": "gh-pages -d dist",
     "develop": "gridsome develop",
     "explore": "gridsome explore",
     "lint": "eslint . --ext .js,.vue",
@@ -18,6 +20,7 @@
     "eslint": "^8.6.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.2.0",
+    "gh-pages": "^3.2.3",
     "prettier": "^2.5.1",
     "sass": "^1.45.1",
     "sass-loader": "^8.0.2"

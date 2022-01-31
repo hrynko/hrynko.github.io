@@ -1,6 +1,7 @@
 module.exports = {
   siteName: 'Aliaksei Hrynko',
   siteDescription: "Aliaksei Hrynko's personal website and blog.",
+  siteUrl: 'https://hrynko.github.io',
   templates: {
     Post: '/blog/:title',
     Tag: '/blog/tag/:title',
