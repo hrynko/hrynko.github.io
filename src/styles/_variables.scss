@@ -4,9 +4,9 @@ html {
 
 body {
   --border-radius: 12px;
-  --color-bg-code: #f8f6fd;
-  --color-bg-content: #fff;
-  --color-bg: #f9f9f9;
+  --color-bg-code-block: #f8f6fd;
+  --color-bg-code: #f2edfb;
+  --color-bg: #fff;
   --color-border: rgba(0, 0, 0, 0.1);
   --color-link: #7648db;
   --color-selection: rgba(181, 139, 243, 0.25);
@@ -15,9 +15,9 @@ body {
   --gap: 3rem;
 
   &[data-theme='dark'] {
-    --color-bg-code: #2d2e3b;
-    --color-bg-content: #161b22;
-    --color-bg: #0e1117;
+    --color-bg-code-block: #2d2e3b;
+    --color-bg-code: #343344;
+    --color-bg: #161b22;
     --color-border: rgba(255, 255, 255, 0.1);
     --color-link: #b58bf3;
     --color-text: #c9d1d9;

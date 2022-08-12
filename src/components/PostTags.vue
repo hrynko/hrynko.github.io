@@ -25,12 +25,17 @@ export default {
     display: inline-block;
     margin: 1px 0.7em 1px 0;
     padding: 0.5em;
+    border: 1px solid var(--color-border);
     border-radius: calc(var(--border-radius) / 2);
-    background-color: var(--color-bg);
     font-family: 'Merriweather Sans', sans-serif;
     font-size: 0.8em;
     color: var(--color-text);
     text-decoration: none;
+
+    &:hover {
+      color: var(--color-link);
+      opacity: 1;
+    }
   }
 
   @media print {

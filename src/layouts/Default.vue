@@ -29,19 +29,11 @@ $layout-padding: 1.5rem;
 
   .sidebar {
     position: fixed;
-    padding: $layout-padding;
+    padding: ($layout-padding * 2) $layout-padding;
     width: 25%;
-    max-width: calc($layout-width * 0.25);
+    max-width: $layout-width * 0.25;
     height: 100%;
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: $layout-padding;
-      right: 0;
-      bottom: $layout-padding;
-      border-left: 1px solid var(--color-border);
-    }
+    overflow-y: auto;
   }
 
   .main {
@@ -53,17 +45,11 @@ $layout-padding: 1.5rem;
   @media screen and (max-width: 768px) {
     .sidebar {
       position: relative;
+      padding-top: $layout-padding;
+      padding-bottom: 0;
       width: 100%;
       max-width: 100%;
-
-      &::after {
-        top: 100%;
-        right: $layout-padding;
-        bottom: 0;
-        left: $layout-padding;
-        border-top: 1px solid var(--color-border);
-        border-left: none;
-      }
+      overflow-y: hidden;
     }
 
     .main {
