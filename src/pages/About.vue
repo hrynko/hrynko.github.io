@@ -11,9 +11,9 @@
       </p>
 
       <p>
-        Here I bring up mainly technical topics that I am passionate about. I
-        have worked with a variety of technologies, but now I am more involved
-        in the web and, above all, the frontend. Thus, you are most likely to
+        Here I bring up mainly technical topics that I am passionate about.
+        Although I have worked with a variety of technologies, now I am more
+        involved in web and, above all, frontend. Thus, you are most likely to
         find here something related to the following technologies that I work
         with and am inspired by:
       </p>
