@@ -1,7 +1,5 @@
-body {
-  &[data-theme='light'] {
-    @import '~prismjs/themes/prism';
-  }
+:root {
+  @import '~prismjs/themes/prism';
 
   &[data-theme='dark'] {
     @import '~prismjs/themes/prism-tomorrow';

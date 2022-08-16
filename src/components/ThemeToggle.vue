@@ -3,7 +3,7 @@
     type="button"
     aria-label="Toggle dark/light theme"
     class="theme-toggle"
-    @click.prevent="handleThemeToggle"
+    @click.prevent="handleToggle"
   >
     <IconSun v-if="isDarkTheme" title="Light theme" width="24" height="24" />
 
@@ -26,14 +26,22 @@ export default {
     }
   },
   mounted() {
-    if (window.__theme == 'dark') {
-      this.isDarkTheme = true
+    const themeMediaQuery = window.matchMedia?.('(prefers-color-scheme: dark)')
+
+    if (themeMediaQuery?.matches) {
+      this.handleToggle()
     }
+
+    themeMediaQuery?.addEventListener('change', this.handleToggle)
   },
   methods: {
-    handleThemeToggle() {
+    handleToggle() {
       this.isDarkTheme = !this.isDarkTheme
-      window.__setPreferredTheme(this.isDarkTheme ? 'dark' : 'light')
+
+      document.documentElement.setAttribute(
+        'data-theme',
+        this.isDarkTheme ? 'dark' : 'light'
+      )
     },
   },
 }

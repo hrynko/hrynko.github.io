@@ -1,8 +1,5 @@
-html {
+:root {
   --base-font-size: 20px;
-}
-
-body {
   --border-radius: 12px;
   --color-bg-code-block: #f8f6fd;
   --color-bg-code: #f2edfb;
@@ -23,14 +20,9 @@ body {
     --color-text: #c9d1d9;
     --color-title: #fff;
   }
-}
 
-@media screen and (max-width: 768px) {
-  html {
+  @media screen and (max-width: 768px) {
     --base-font-size: 17px;
-  }
-
-  body {
     --gap: 1.5rem;
   }
 }
