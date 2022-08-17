@@ -28,4 +28,13 @@ module.exports = {
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
     },
   },
+  chainWebpack(config) {
+    config.module
+      .rule('vue')
+      .use('vue-loader')
+      .tap((options) => {
+        options.compilerOptions.whitespace = 'condense'
+        return options
+      })
+  },
 }
