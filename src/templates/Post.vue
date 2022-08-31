@@ -9,8 +9,8 @@
       <div class="post__header">
         <g-image
           v-if="$page.post.cover_image"
+          :alt="$page.post.title + ' (cover image)'"
           :src="$page.post.cover_image"
-          alt="Cover image"
         />
       </div>
 

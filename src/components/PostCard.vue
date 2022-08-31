@@ -1,24 +1,22 @@
 <template>
   <g-link :to="post.path" class="post-card content-box">
-    <div class="post-card__header">
+    <div class="post-card__cover">
       <g-image
         v-if="post.cover_image"
+        :alt="post.title + ' (cover image)'"
         :src="post.cover_image"
-        alt="Cover image"
       />
     </div>
 
-    <div class="post-card__content">
-      <h2 class="post-card__title" v-html="post.title" />
+    <h2 class="post-card__title" v-html="post.title" />
 
-      <PostMeta class="post-card__meta" :post="post" />
+    <PostMeta class="post-card__meta" :post="post" />
 
-      <p v-html="post.description" />
+    <p v-html="post.description" />
 
-      <PostTags :post="post" />
+    <PostTags :post="post" />
 
-      <IconArrowRight class="post-card__arrow" width="1.5em" height="1.5em" />
-    </div>
+    <IconArrowRight class="post-card__arrow" width="1.5em" height="1.5em" />
   </g-link>
 </template>
 
@@ -62,7 +60,7 @@ export default {
     margin-top: var(--gap);
   }
 
-  &__header {
+  &__cover {
     margin-left: calc(var(--gap) * -1);
     margin-right: calc(var(--gap) * -1);
     margin-bottom: calc(var(--gap) / 2);
@@ -100,7 +98,7 @@ export default {
   }
 
   @media print {
-    &__header {
+    &__cover {
       margin: 0 0 1rem;
       border-radius: 0;
     }
