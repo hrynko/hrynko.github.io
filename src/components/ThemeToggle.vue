@@ -28,7 +28,9 @@ export default {
   mounted() {
     const themeMediaQuery = window.matchMedia?.('(prefers-color-scheme: dark)')
 
-    if (themeMediaQuery?.matches) {
+    if (document.documentElement.getAttribute('data-theme') === 'dark') {
+      this.isDarkTheme = true
+    } else if (themeMediaQuery?.matches) {
       this.handleToggle()
     }
 
