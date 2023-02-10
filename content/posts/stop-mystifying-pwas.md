@@ -7,7 +7,7 @@ description: Have you heard that PWAs are going to kill mobile apps? Should we t
 
 Though PWAs are still not that widespread, there is more and more talk about them. And that's great, except for one thing – it's still quite difficult to figure out what PWA is from all this talk. Some posts even claim that PWAs will replace or even kill mobile apps without giving any idea how or why.
 
-Such posts, of course, stir up interest in the technology, however their point is lost by the time you actually have to develop a PWA. Getting into PWA development can be tricky, though it's not that difficult to explain what a PWA is, avoiding terms like "mobile app killers."
+Such posts, of course, stir up interest in the technology, however their point is lost by the time you actually have to develop a PWA. Getting into PWA development can be tricky, though it's not that difficult to explain what a PWA is, avoiding terms like "mobile app killers".
 
 After all, PWA is still just a "classic" web application, just flavored with manifests and service workers, which in turn provide features like installability, offline mode, and a few others. These features are clear and enticing (though not necessary at all), and, thanks to them, it really looks like PWAs are taking over the mobile experience we're used to. So, let's consider the technical points that make this possible in a little more detail.
 
