@@ -36,7 +36,7 @@
       right: 0;
       bottom: -0.2em;
       width: 0;
-      height: 0.1em;
+      height: 0.12em;
       background-color: var(--color-link);
       opacity: 0.8;
       transition: 0.3s;

@@ -23,9 +23,9 @@ export default {
 
   a {
     display: inline-block;
-    margin: 1px 0.7em 1px 0;
+    margin: 2px 0.7em 2px 0;
     padding: 0.5em;
-    border: 1px solid var(--color-border);
+    border: 2px solid var(--color-border);
     border-radius: calc(var(--border-radius) / 2);
     font-family: 'Merriweather Sans', sans-serif;
     font-size: 0.8em;

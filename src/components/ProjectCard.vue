@@ -17,7 +17,7 @@
   position: relative;
 
   & + & {
-    margin-top: var(--gap);
+    margin-top: 1.5rem;
   }
 
   &__title {

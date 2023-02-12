@@ -52,6 +52,6 @@ export default {
 
 <style lang="scss" scoped>
 a + a {
-  margin-left: 4px;
+  margin-left: 8px;
 }
 </style>

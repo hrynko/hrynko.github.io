@@ -108,6 +108,7 @@ query Post ($id: ID!) {
 
   &__back-link {
     display: block;
+    margin-right: var(--gap);
     margin-bottom: 1.5rem;
     margin-left: var(--gap);
     font-family: 'Merriweather Sans', sans-serif;

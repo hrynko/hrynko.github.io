@@ -33,7 +33,7 @@ img {
 .content-box {
   margin: 0 auto;
   padding: var(--gap);
-  border: 1px solid var(--color-border);
+  border: 2px solid var(--color-border);
   border-radius: var(--border-radius);
 
   @media print {

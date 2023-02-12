@@ -1,13 +1,13 @@
 :root {
-  --base-font-size: 20px;
-  --border-radius: 12px;
+  --base-font-size: 18px;
+  --border-radius: 16px;
   --color-bg-code-block: #f8f6fd;
   --color-bg-code: #f2edfb;
   --color-bg: #fff;
   --color-border: rgba(0, 0, 0, 0.1);
   --color-link: #7648db;
   --color-selection: rgba(181, 139, 243, 0.25);
-  --color-text: #444;
+  --color-text: #333;
   --color-title: #111;
   --gap: 3rem;
 
@@ -18,11 +18,12 @@
     --color-border: rgba(255, 255, 255, 0.2);
     --color-link: #b58bf3;
     --color-text: #c9d1d9;
-    --color-title: #fff;
+    --color-title: #eee;
   }
 
   @media screen and (max-width: 768px) {
-    --base-font-size: 17px;
+    --base-font-size: 16px;
+    --border-radius: 12px;
     --gap: 1.5rem;
   }
 }
