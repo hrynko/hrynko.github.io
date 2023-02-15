@@ -2,20 +2,24 @@
 title: Stop mystifying PWAs
 date: 2022-01-30
 tags: ['pwa']
-description: Have you heard that PWAs are going to kill mobile apps? Should we then give up our favorite mobile apps in favor of some progressive yet web apps? Let's try to get this sorted out.
+description: PWAs are one of the most talked-about topics in modern web development, but many developers still have misconceptions about them. In this article, I will try figure out what they are and what they are not.
 ---
 
-Though PWAs are still not that widespread, there is more and more talk about them. And that's great, except for one thing – it's still quite difficult to figure out what PWA is from all this talk. Some posts even claim that PWAs will replace or even kill mobile apps without giving any idea how or why.
+Progressive web applications are one of the most talked-about topics in modern web development. They have long been touted as a replacement for native mobile apps, but in reality, PWAs are still the same web apps we are used to, but with some (possible) advanced features.
 
-Such posts, of course, stir up interest in the technology, however their point is lost by the time you actually have to develop a PWA. Getting into PWA development can be tricky, though it's not that difficult to explain what a PWA is, avoiding terms like "mobile app killers".
+PWAs are often described as a combination of web and mobile app features, which can be confusing. Some sources focus on the technical features and capabilities of PWAs, while others focus on their user experience and the benefits they provide. In essence, a PWA is just a regular web app flavored with manifests and service workers, which in turn provide features like installability, offline mode, and a few others.
 
-After all, PWA is still just a "classic" web application, just flavored with manifests and service workers, which in turn provide features like installability, offline mode, and a few others. These features are clear and enticing (though not necessary at all), and, thanks to them, it really looks like PWAs are taking over the mobile experience we're used to. So, let's consider the technical points that make this possible in a little more detail.
+These features (although they are not mandatory) provide a native-like experience and give the impression that PWA can be a complete substitute for native apps. However, PWAs are still limited by the capabilities of web browsers. These applications do not have access to the full range of native APIs, which means that they cannot access some of the more advanced features of mobile devices.
+
+PWAs are not a one-size-fits-all solution. They may not be suitable for every type of application and may not provide the same level of functionality as native apps. Despite all the buzz around them, PWAs are not a replacement for native mobile apps. However, they are worth considering for anyone looking to build a new web app or upgrade an existing one.
+
+From a technical standpoint, it is worth considering what makes it all possible.
 
 ### Web app manifest
 
 Manifest is a regular JSON file that provides the browser with some meta-information about the app. A typical manifest includes the name, icons, and base URL of the application. But it can also include screenshots, shortcuts, mode of operation when installed on the user's device, as well as a number of other items (see [MDN](https://developer.mozilla.org/en-US/docs/Web/Manifest) for more).
 
-It's kind of like filling out an app page for some marketplace, isn't it? Except for going through moderation and paying fees, of course.
+It's kind of like filling out an app page for some marketplace, except for going through moderation and paying the fees, of course.
 
 ### Service workers
 
@@ -25,6 +29,6 @@ Sounds promising, but unlike creating a manifest, working with service workers r
 
 ### And… That's it
 
-Manifest and service workers are basically all the technical nuances of PWA development. As already mentioned, there are some other requirements besides installability and offline mode for a web app to be called progressive (see checklist on [web.dev](https://web.dev/pwa-checklist/)). However, they generally apply to any good web application, as these are requirements such as secure connection, responsiveness, accessibility, etc.
+Manifest and service workers are basically all the technical nuances of PWA development. As already mentioned, there are some other "requirements" besides installability and offline mode for a web app to be called progressive (see checklist on [web.dev](https://web.dev/pwa-checklist/)). However, they generally apply to any good web application, as these are requirements such as secure connection, responsiveness, accessibility, etc.
 
 In this respect, PWA is not even a type of application, but rather a set of best practices that most modern web apps should follow. Therefore, it all looks like a natural evolution of web applications, which is quite in line with today's realities and user needs. It can certainly be a threat to a certain layer of native applications, but the adoption of PWAs happens quite organically. Anyhow, further developments are largely up to the users.
