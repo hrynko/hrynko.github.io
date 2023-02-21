@@ -1,6 +1,33 @@
 <template>
   <Layout>
     <ProjectCard>
+      <template #title>mdslides</template>
+
+      <p>
+        Markdown slides editor, designed to focus on content rather than moving
+        text blocks back and forth.
+      </p>
+
+      <template #meta>
+        <a
+          href="https://github.com/mdslides/app"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
+          <IconGitHub width="2em" height="2em" />
+        </a>
+
+        <a
+          href="https://mdslides.github.io"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
+          <IconExternalLink width="2em" height="2em" />
+        </a>
+      </template>
+    </ProjectCard>
+
+    <ProjectCard>
       <template #title>vue-pdf-embed</template>
 
       <p>
@@ -9,8 +36,6 @@
         support for Vue 3 (while remaining compatible with Vue 2). This library
         was later mentioned in the Awesome Vue list.
       </p>
-
-      <p>Tech stack: JavaScript, Vue, PDF.js, Jest, Webpack</p>
 
       <template #meta>
         <a
@@ -34,6 +59,7 @@
 </template>
 
 <script>
+import IconExternalLink from '~/components/icons/ExternalLinkIcon.vue'
 import IconGitHub from '~/components/icons/GitHubIcon.vue'
 import IconNpmWide from '~/components/icons/NpmWideIcon.vue'
 import ProjectCard from '~/components/ProjectCard.vue'
@@ -43,6 +69,7 @@ export default {
     title: 'Projects',
   },
   components: {
+    IconExternalLink,
     IconGitHub,
     IconNpmWide,
     ProjectCard,
