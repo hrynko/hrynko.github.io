@@ -23,12 +23,14 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/styles/mixins';
+
 .sidebar {
-  @media screen and (min-width: 769px) {
+  @include media-breakpoint-up($lg) {
     text-align: center;
   }
 
-  @media screen and (max-width: 768px) and (min-width: 577px) {
+  @include media-breakpoint-only($sm) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,7 +50,7 @@ export default {
     }
   }
 
-  @media screen and (max-width: 576px) {
+  @include media-breakpoint-down($sm) {
     display: flex;
     flex-direction: column;
     align-items: center;

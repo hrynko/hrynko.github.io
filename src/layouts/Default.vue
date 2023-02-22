@@ -19,6 +19,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/styles/mixins';
+
 $layout-width: 1140px;
 $layout-padding: 1.5rem;
 
@@ -42,7 +44,7 @@ $layout-padding: 1.5rem;
     padding: $layout-padding;
   }
 
-  @media screen and (max-width: 768px) {
+  @include media-breakpoint-down($lg) {
     .sidebar {
       position: relative;
       padding-top: $layout-padding;

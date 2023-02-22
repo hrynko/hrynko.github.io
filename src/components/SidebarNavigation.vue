@@ -17,6 +17,8 @@
 </template>
 
 <style lang="scss">
+@import '@/styles/mixins';
+
 .sidebar-navigation {
   margin: 2rem 0 3rem;
   font-family: 'Merriweather Sans', sans-serif;
@@ -51,7 +53,7 @@
     }
   }
 
-  @media screen and (max-width: 768px) and (min-width: 577px) {
+  @include media-breakpoint-only($sm) {
     margin: 0;
 
     li {
@@ -61,7 +63,7 @@
     }
   }
 
-  @media screen and (max-width: 576px) {
+  @include media-breakpoint-down($sm) {
     margin: 1rem 0 0.5rem;
 
     ul {

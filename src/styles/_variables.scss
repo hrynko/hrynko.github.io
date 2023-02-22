@@ -1,3 +1,5 @@
+@import 'mixins';
+
 :root {
   --base-font-size: 18px;
   --border-radius: 16px;
@@ -21,7 +23,7 @@
     --color-title: #eee;
   }
 
-  @media screen and (max-width: 768px) {
+  @include media-breakpoint-down($lg) {
     --base-font-size: 16px;
     --border-radius: 12px;
     --gap: 1.5rem;

@@ -1,0 +1,61 @@
+$sm: 576px;
+$lg: 768px;
+$breakpoints: 0, $sm, $lg, 9999;
+
+@function breakpoint-max($breakpoint) {
+  @return if($breakpoint > 0, $breakpoint - 0.02, null);
+}
+
+@function breakpoint-min($breakpoint) {
+  @return if($breakpoint != 0, $breakpoint, null);
+}
+
+@function breakpoint-next($breakpoint) {
+  $n: index($breakpoints, $breakpoint);
+
+  @return if($n < length($breakpoints), nth($breakpoints, $n + 1), null);
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+  $max: breakpoint-max($breakpoint);
+
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-only($breakpoint) {
+  $min: breakpoint-min($breakpoint);
+  $next: breakpoint-next($breakpoint);
+  $max: breakpoint-max($next);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-breakpoint-up($min) {
+      @content;
+    }
+  } @else if $min == null {
+    @include media-breakpoint-down($next) {
+      @content;
+    }
+  }
+}
+
+@mixin media-breakpoint-up($breakpoint) {
+  $min: breakpoint-min($breakpoint);
+
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
