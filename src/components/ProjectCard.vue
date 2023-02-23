@@ -1,5 +1,5 @@
 <template>
-  <div class="project-card content-box">
+  <section class="project-card content-box">
     <h2 class="project-card__title">
       <slot name="title" />
     </h2>
@@ -9,7 +9,7 @@
     <div class="project-card__meta">
       <slot name="meta" />
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss">

@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="content-box">
+    <article class="content-box">
       <h1>About</h1>
 
       <p>
@@ -28,7 +28,7 @@
         <IconJamstack width="2em" height="2em" />
         <IconPwaWide width="4em" height="2em" />
       </p>
-    </div>
+    </article>
   </Layout>
 </template>
 
