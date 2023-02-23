@@ -1,10 +1,5 @@
 <template>
   <Layout>
-    <g-link to="/blog/" class="post__back-link">
-      <IconArrowLeft />
-      Back to the list of posts
-    </g-link>
-
     <article class="post content-box">
       <div class="post__header">
         <g-image
@@ -26,7 +21,6 @@
 </template>
 
 <script>
-import IconArrowLeft from '~/components/icons/ArrowLeftIcon'
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 
@@ -43,7 +37,6 @@ export default {
     }
   },
   components: {
-    IconArrowLeft,
     PostMeta,
     PostTags,
   },
@@ -106,23 +99,8 @@ query Post ($id: ID!) {
     }
   }
 
-  &__back-link {
-    display: block;
-    margin-right: var(--gap);
-    margin-bottom: 1.5rem;
-    margin-left: var(--gap);
-    font-family: 'Merriweather Sans', sans-serif;
-    text-decoration: none;
-  }
-
   .post-meta {
     margin-bottom: 1.5rem;
-  }
-
-  @media print {
-    &__back-link {
-      display: none;
-    }
   }
 }
 </style>

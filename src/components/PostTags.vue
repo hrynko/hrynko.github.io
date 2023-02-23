@@ -1,7 +1,7 @@
 <template>
   <div class="post-tags">
     <g-link v-for="tag in post.tags" :key="tag.id" :to="tag.path">
-      <span>#</span> {{ tag.title }}
+      # {{ tag.title }}
     </g-link>
   </div>
 </template>
@@ -19,11 +19,11 @@ export default {
 
 <style lang="scss">
 .post-tags {
-  margin: 1em 0 0;
+  margin: 1em 0 -0.5em;
 
   a {
     display: inline-block;
-    margin: 2px 0.7em 2px 0;
+    margin: 0 0.5rem 0.5rem 0;
     padding: 0.5em;
     border: 2px solid var(--color-border);
     border-radius: calc(var(--border-radius) / 2);

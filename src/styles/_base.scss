@@ -20,6 +20,8 @@ body {
 
 a {
   color: var(--color-link);
+  text-decoration-color: var(--color-link-underline);
+  text-decoration-thickness: 10%;
 
   &:hover {
     opacity: 0.8;
