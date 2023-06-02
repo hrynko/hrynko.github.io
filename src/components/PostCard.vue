@@ -8,7 +8,7 @@
       <g-link :to="post.path">{{ post.title }}</g-link>
     </h2>
 
-    <PostMeta class="post-card__meta" :post="post" />
+    <PostMeta :post="post" />
 
     <p v-html="post.description" />
 
@@ -63,11 +63,8 @@ export default {
   }
 
   &__title {
-    margin: 0;
-  }
-
-  &__meta {
-    margin: 0.5rem 0 1rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
   }
 
   @media print {

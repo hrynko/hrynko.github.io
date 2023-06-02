@@ -9,7 +9,7 @@
         />
       </div>
 
-      <h1>{{ $page.post.title }}</h1>
+      <h1 class="post__title">{{ $page.post.title }}</h1>
 
       <PostMeta :post="$page.post" />
 
@@ -81,13 +81,17 @@ query Post ($id: ID!) {
     }
   }
 
+  &__title {
+    margin-bottom: 0.5rem;
+  }
+
   &__content {
     h2:first-child {
       margin-top: 0;
     }
 
     p:first-child {
-      font-size: 1.2em;
+      font-size: 1.125em;
       color: var(--color-title);
     }
 
@@ -97,10 +101,6 @@ query Post ($id: ID!) {
       width: calc(100% + var(--gap) * 2);
       max-width: none;
     }
-  }
-
-  .post-meta {
-    margin-bottom: 1.5rem;
   }
 }
 </style>
