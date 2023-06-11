@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <ProjectCard>
-      <template #title>mdslides</template>
+      <template #title>MdSlides</template>
 
       <p>
         Markdown slides editor, designed to focus on content rather than moving
