@@ -1,3 +1,5 @@
+@import 'mixins';
+
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -37,6 +39,14 @@ img {
   padding: var(--gap);
   border: 2px solid var(--color-border);
   border-radius: var(--border-radius);
+
+  @include media-breakpoint-down($sm) {
+    padding: var(--gap) 0 0;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    border-radius: 0;
+  }
 
   @media print {
     padding: 0;
