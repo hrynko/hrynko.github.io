@@ -1,9 +1,5 @@
 <template>
   <section class="post-card content-box">
-    <div v-if="post.cover_image" class="post-card__cover">
-      <g-image :alt="post.title + ' (cover image)'" :src="post.cover_image" />
-    </div>
-
     <h2 class="post-card__title">
       <g-link :to="post.path">{{ post.title }}</g-link>
     </h2>
@@ -45,33 +41,9 @@ export default {
     margin-top: 1.5rem;
   }
 
-  &__cover {
-    margin-left: calc(var(--gap) * -1);
-    margin-right: calc(var(--gap) * -1);
-    margin-bottom: calc(var(--gap) / 2);
-    margin-top: calc(var(--gap) * -1);
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
-    overflow: hidden;
-
-    &:empty {
-      display: none;
-    }
-
-    img {
-      min-width: 100%;
-    }
-  }
-
   &__title {
     margin-top: 0;
     margin-bottom: 0.5rem;
-  }
-
-  @media print {
-    &__cover {
-      margin: 0 0 1rem;
-      border-radius: 0;
-    }
   }
 }
 </style>

@@ -23,7 +23,6 @@ query {
           title
           path
         }
-        # cover_image (width: 800, blur: 10)
         description
       }
     }

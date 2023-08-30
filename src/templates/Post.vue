@@ -1,14 +1,6 @@
 <template>
   <Layout>
     <article class="post content-box">
-      <div class="post__header">
-        <g-image
-          v-if="$page.post.cover_image"
-          :alt="$page.post.title + ' (cover image)'"
-          :src="$page.post.cover_image"
-        />
-      </div>
-
       <h1 class="post__title">{{ $page.post.title }}</h1>
 
       <PostMeta :post="$page.post" />
@@ -55,7 +47,6 @@ query Post ($id: ID!) {
       title
       path
     }
-    # cover_image (width: 800, blur: 10)
     description
     content
   }
@@ -64,23 +55,6 @@ query Post ($id: ID!) {
 
 <style lang="scss">
 .post {
-  &__header {
-    margin-top: calc(var(--gap) * -1);
-    margin-bottom: calc(var(--gap) / 2);
-    margin-left: calc(var(--gap) * -1);
-    width: calc(100% + var(--gap) * 2);
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
-    overflow: hidden;
-
-    &:empty {
-      display: none;
-    }
-
-    img {
-      width: 100%;
-    }
-  }
-
   &__title {
     margin-bottom: 0.5rem;
   }
