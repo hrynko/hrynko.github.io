@@ -1,8 +1,10 @@
 <template>
   <Layout>
-    <h1>Page not found</h1>
+    <article class="content-box">
+      <h1>Page not found</h1>
 
-    <p>The page doesn't exist or was removed.</p>
+      <span>The page doesn't exist or was removed.</span>
+    </article>
   </Layout>
 </template>
 
