@@ -3,7 +3,7 @@ module.exports = {
   siteDescription: "Aliaksei Hrynko's personal website and blog.",
   siteUrl: 'https://hrynko.github.io',
   templates: {
-    Post: '/blog/:title',
+    Post: '/blog/:fileInfo__name',
     Tag: '/blog/tag/:title',
   },
   plugins: [
