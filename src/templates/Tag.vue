@@ -10,33 +10,6 @@
   </Layout>
 </template>
 
-<page-query>
-query Tag ($id: ID!) {
-  tag (id: $id) {
-    title
-    belongsTo {
-      edges {
-        node {
-          ...on Post {
-            title
-            path
-            date (format: "MMM D, YYYY")
-            dateRaw: date (format: "YYYY-MM-DD")
-            timeToRead
-            tags {
-              id
-              title
-              path
-            }
-            description
-          }
-        }
-      }
-    }
-  }
-}
-</page-query>
-
 <script>
 import PostCard from '~/components/PostCard.vue'
 
@@ -51,6 +24,34 @@ export default {
   },
 }
 </script>
+
+<page-query>
+query ($id: ID!) {
+  tag (id: $id) {
+    title
+    belongsTo {
+      edges {
+        node {
+          ... on Post {
+            date (format: "MMM D, YYYY")
+            dateRaw: date (format: "YYYY-MM-DD")
+            description
+            id
+            path
+            tags {
+              id
+              path
+              title
+            }
+            timeToRead
+            title
+          }
+        }
+      }
+    }
+  }
+}
+</page-query>
 
 <style lang="scss">
 .tag-title {

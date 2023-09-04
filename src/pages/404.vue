@@ -3,7 +3,7 @@
     <article class="content-box">
       <h1>Page not found</h1>
 
-      <span>The page doesn't exist or was removed.</span>
+      <p>The page doesn't exist or was removed.</p>
     </article>
   </Layout>
 </template>
@@ -15,3 +15,9 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+p:last-child {
+  margin-bottom: 0;
+}
+</style>

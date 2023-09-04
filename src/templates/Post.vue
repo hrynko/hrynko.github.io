@@ -36,20 +36,20 @@ export default {
 </script>
 
 <page-query>
-query Post ($id: ID!) {
-  post: post (id: $id) {
-    title
-    path
+query ($id: ID!) {
+  post (id: $id) {
+    content
     date (format: "MMM D, YYYY")
     dateRaw: date (format: "YYYY-MM-DD")
-    timeToRead
+    description
+    path
     tags {
       id
-      title
       path
+      title
     }
-    description
-    content
+    timeToRead
+    title
   }
 }
 </page-query>

@@ -8,29 +8,6 @@
   </Layout>
 </template>
 
-<page-query>
-query {
-  posts: allPost {
-    edges {
-      node {
-        id
-        title
-        path
-        date (format: "MMM D, YYYY")
-        dateRaw: date (format: "YYYY-MM-DD")
-        timeToRead
-        tags {
-          id
-          title
-          path
-        }
-        description
-      }
-    }
-  }
-}
-</page-query>
-
 <script>
 import PostCard from '~/components/PostCard.vue'
 
@@ -43,3 +20,26 @@ export default {
   },
 }
 </script>
+
+<page-query>
+query {
+  posts: allPost {
+    edges {
+      node {
+        date (format: "MMM D, YYYY")
+        dateRaw: date (format: "YYYY-MM-DD")
+        description
+        id
+        path
+        tags {
+          id
+          path
+          title
+        }
+        timeToRead
+        title
+      }
+    }
+  }
+}
+</page-query>
