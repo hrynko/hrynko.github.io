@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{iyQ6:function(e,t,n){"use strict";n.r(t);var l={metaInfo:{title:"Index"},mounted(){this.$router.replace("/blog/")}},i=n("KHd+"),o=Object(i.a)(l,(function(){var e=this.$createElement;return(this._self._c||e)("div")}),[],!1,null,null,null);t.default=o.exports}}]);
