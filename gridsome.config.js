@@ -24,6 +24,7 @@ module.exports = {
   transformers: {
     remark: {
       plugins: ['@gridsome/remark-prismjs'],
+      autolinkHeadings: false,
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
     },
