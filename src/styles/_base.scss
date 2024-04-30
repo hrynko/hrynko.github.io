@@ -22,6 +22,7 @@ body {
 
 a {
   color: var(--color-link);
+  text-underline-position: from-font;
   text-decoration-color: var(--color-link-underline);
   text-decoration-thickness: 10%;
 
