@@ -11,11 +11,11 @@ GitHub Actions, a powerful workflow automation tool, enables you to automate var
 
 These two tools seem to be a perfect match: by leveraging GitHub Actions, you can automate the deployment process, ensuring that your site is consistently updated with the latest changes from your repository. This article will guide you through the steps to deploy to GitHub Pages using GitHub Actions.
 
-### TL;DR
+## TL;DR
 
 If you're already acquainted with GitHub Actions and only need the complete workflow script, [scroll down to the script section](#step-4-review-the-final-script) or [explore it within a live project on GitHub](https://github.com/mdslides/app/blob/v1.0.0/.github/workflows/github-pages-deploy.yml).
 
-### Prerequisites
+## Prerequisites
 
 - A GitHub repository containing your Node project
 - Basic understanding of [YAML](https://en.wikipedia.org/wiki/YAML)
@@ -93,8 +93,6 @@ The expected workflow is outlined in the following picture:
 ![Sample workflow graph](./images/gh-actions-workflow-graph.png)
 
 For each job in the config, [the type of machine to run it on](https://docs.github.com/en/actions/using-jobs/choosing-the-runner-for-a-job) and a list of execution steps are specified. For the `deploy` job, a prerequisite job (so that `build` must complete successfully beforehand) and [a target deployment environment](https://docs.github.com/en/actions/using-jobs/using-environments-for-jobs) are additionally defined. The deployment environment is specified with a URL derived from the output of the `deployment` step (to be added to the `deploy` job).
-
-<!-- The output of `actions/deploy-pages` (which will be added later) is used as the deployment URL. -->
 
 ```yaml
 jobs:
@@ -228,6 +226,6 @@ Navigate to the "Actions" tab in your GitHub repository to monitor the progress 
 
 _Et voilà_, once the workflow successfully completes, your project will be deployed to GitHub Pages.
 
-### Conclusion
+## Conclusion
 
 Setting up the automated build/deployment pipeline for your project might seem involved initially. However, this investment pays off with a streamlined process for future releases. After the initial setup, subsequent deployments become as simple as creating a new release on GitHub. Happy coding and enjoy the benefits of automation!
