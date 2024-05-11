@@ -1,0 +1,51 @@
+---
+import author from '../assets/author.svg?raw'
+---
+
+<div class="author-avatar">
+  <Fragment set:html={author} class="foo" />
+</div>
+
+<style lang="scss">
+  .author-avatar {
+    :global(svg) {
+      position: absolute;
+      display: block;
+      width: auto;
+      height: 2em;
+      transform: translateY(-50%);
+
+      :global(.eyeLeft) {
+        animation: eyeLeftBlink 4s infinite ease-in-out;
+
+        @keyframes eyeLeftBlink {
+          90% {
+            transform: translate(0%) scale(1);
+          }
+          95% {
+            transform: translate(-6%, 38%) scale(1.2, 0.2);
+          }
+          100% {
+            transform: translate(0%) scale(1);
+          }
+        }
+      }
+
+      :global(.eyeRight) {
+        animation: eyeRightBlink 4s infinite ease-in-out;
+
+        @keyframes eyeRightBlink {
+          90% {
+            transform: translate(0%) scale(1);
+          }
+          95% {
+            transform: translate(-13%, 38%) scale(1.2, 0.2);
+          }
+          100% {
+            transform: translate(0%) scale(1);
+          }
+        }
+      }
+    }
+  }
+</style>

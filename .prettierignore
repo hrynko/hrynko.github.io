@@ -1,6 +1,0 @@
-.cache
-.DS_Store
-src/.temp
-src/index.html
-node_modules
-dist

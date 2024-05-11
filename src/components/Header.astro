@@ -1,0 +1,48 @@
+---
+import AuthorAvatar from './AuthorAvatar.astro'
+import HeaderLink from './HeaderLink.astro'
+---
+
+<header>
+  <nav>
+    <AuthorAvatar />
+
+    <ul>
+      <li><HeaderLink href="/blog">Blog</HeaderLink></li>
+      <li><HeaderLink href="/projects">Projects</HeaderLink></li>
+      <li><HeaderLink href="/about">About</HeaderLink></li>
+    </ul>
+  </nav>
+</header>
+
+<style lang="scss">
+  @import '../styles/variables';
+
+  header {
+    position: sticky;
+    top: 0;
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: $sm;
+    border-bottom: 2px solid rgb(var(--color-text));
+    background-color: rgb(var(--color-background));
+    user-select: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    font-weight: 700;
+
+    ul {
+      display: flex;
+      gap: 0.5em;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+</style>

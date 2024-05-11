@@ -1,6 +1,8 @@
-$sm: 576px;
-$lg: 768px;
-$breakpoints: 0, $sm, $lg, 9999;
+@import 'variables';
+
+// Breakpoint helpers
+
+$breakpoints: 0, $sm, $lg;
 
 @function breakpoint-max($breakpoint) {
   @return if($breakpoint > 0, $breakpoint - 0.02, null);
@@ -15,6 +17,8 @@ $breakpoints: 0, $sm, $lg, 9999;
 
   @return if($n < length($breakpoints), nth($breakpoints, $n + 1), null);
 }
+
+// Breakpoints
 
 @mixin media-breakpoint-down($breakpoint) {
   $max: breakpoint-max($breakpoint);
@@ -56,6 +60,14 @@ $breakpoints: 0, $sm, $lg, 9999;
       @content;
     }
   } @else {
+    @content;
+  }
+}
+
+// Color schemes
+
+@mixin color-scheme-dark {
+  @media (prefers-color-scheme: dark) {
     @content;
   }
 }

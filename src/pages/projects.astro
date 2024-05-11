@@ -1,0 +1,61 @@
+---
+import { getCollection } from 'astro:content'
+
+import BaseHead from '../components/BaseHead.astro'
+import Footer from '../components/Footer.astro'
+import Header from '../components/Header.astro'
+
+const projects = await Promise.all(
+  (await getCollection('projects'))
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+    .map(async (project) => {
+      const { Content } = await project.render()
+      return { ...project, Content }
+    })
+)
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title="Projects" />
+
+    <style lang="scss">
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        li {
+          & + li {
+            margin-top: 1em;
+          }
+        }
+
+        :global(p) {
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <Header />
+
+    <main>
+      <section>
+        <ul>
+          {
+            projects.map(({ Content, ...project }) => (
+              <li>
+                <h2>{project.data.title}</h2>
+                <Content />
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>

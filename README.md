@@ -1,3 +1,3 @@
 # hrynko.github.io
 
-This is a repository of my personal website, which is powered by Jamstack and is based on Vue and Gridsome.
+[Hrynko](https://github.com/hrynko)'s personal website, which is powered by Jamstack and is based on Astro.

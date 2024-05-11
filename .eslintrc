@@ -1,11 +1,24 @@
 {
-  "env": {
-    "node": true
-  },
-  "extends": ["eslint:recommended", "plugin:vue/essential"],
-  "plugins": ["prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:astro/recommended",
+    "prettier",
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
+    "@typescript-eslint/triple-slash-reference": "off",
     "prettier/prettier": "warn",
-    "vue/multi-word-component-names": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.astro"],
+      "parser": "astro-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".astro"],
+      },
+    },
+  ],
 }

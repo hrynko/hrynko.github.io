@@ -1,0 +1,18 @@
+@import 'mixins';
+
+:root {
+  --color-background: 255, 255, 255;
+  --color-border: 229, 233, 240;
+  --color-heading: 15, 18, 25;
+  --color-primary: 55, 197, 240;
+  --color-subtext: 128, 143, 178;
+  --color-text: 34, 41, 57;
+
+  @include color-scheme-dark {
+    --color-background: 17, 17, 17;
+    --color-border: 58, 67, 75;
+    --color-heading: 255, 255, 255;
+    --color-subtext: 160, 171, 197;
+    --color-text: 255, 255, 255;
+  }
+}

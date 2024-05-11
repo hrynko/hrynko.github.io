@@ -1,0 +1,35 @@
+---
+import angular from '../assets/angular.svg?raw'
+import jamstack from '../assets/jamstack.svg?raw'
+import js from '../assets/js.svg?raw'
+import nodejs from '../assets/nodejs.svg?raw'
+import pwa from '../assets/pwa.svg?raw'
+import react from '../assets/react.svg?raw'
+import ts from '../assets/ts.svg?raw'
+import vue from '../assets/vue.svg?raw'
+---
+
+<div class="tech-stack-icons">
+  <Fragment set:html={js} />
+  <Fragment set:html={ts} />
+  <Fragment set:html={nodejs} />
+  <Fragment set:html={angular} />
+  <Fragment set:html={react} />
+  <Fragment set:html={vue} />
+  <Fragment set:html={jamstack} />
+  <Fragment set:html={pwa} />
+</div>
+
+<style lang="scss">
+  .tech-stack-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.1em;
+
+    :global(svg) {
+      width: auto;
+      height: 2em;
+      fill: currentColor;
+    }
+  }
+</style>

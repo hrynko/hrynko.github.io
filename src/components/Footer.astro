@@ -1,0 +1,47 @@
+---
+import githubIcon from '../assets/github.svg?raw'
+import linkedinIcon from '../assets/linkedin.svg?raw'
+---
+
+<footer>
+  <div class="social-links">
+    <a href="https://github.com/hrynko" target="_blank">
+      <span class="sr-only">Go to hrynko's GitHub profile</span>
+      <Fragment set:html={githubIcon} />
+    </a>
+
+    <a href="https://linkedin.com/in/aliaksei-hrynko/" target="_blank">
+      <span class="sr-only">Go to hrynko's LinkedIn profile</span>
+      <Fragment set:html={linkedinIcon} />
+    </a>
+  </div>
+</footer>
+
+<style lang="scss">
+  @import '../styles/variables';
+
+  footer {
+    margin: auto;
+    padding: 2rem 1rem;
+    max-width: $sm;
+    border-top: 2px solid rgb(var(--color-border));
+    color: rgb(var(--color-subtext));
+    text-align: center;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    a {
+      :global(svg) {
+        display: block;
+        padding: 0.1em;
+        width: auto;
+        height: 2em;
+        fill: rgb(var(--color-subtext));
+      }
+    }
+  }
+</style>
