@@ -6,7 +6,7 @@
     "prepare": "husky",
     "dev": "astro dev",
     "build": "astro check && astro build",
-    "lint": "eslint . --ext .js,.jsx,.mjs,.ts,.tsx,.astro --fix --ignore-path .gitignore",
+    "lint": "eslint . --ext .js,.ts,.tsx,.astro --fix --ignore-path .gitignore",
     "format": "prettier . --write --ignore-path .gitignore"
   },
   "dependencies": {
@@ -16,6 +16,7 @@
     "@fontsource/noto-sans": "^5.0.21",
     "@playform/compress": "^0.0.4",
     "astro": "^4.2.5",
+    "medium-zoom": "^1.1.0",
     "rehype-external-links": "^3.0.0"
   },
   "devDependencies": {

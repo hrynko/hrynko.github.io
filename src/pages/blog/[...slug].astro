@@ -20,3 +20,12 @@ const { Content } = await post.render()
 <BaseLayout {...post.data}>
   <Content />
 </BaseLayout>
+
+<script>
+  import mediumZoom from 'medium-zoom'
+
+  mediumZoom('article img', {
+    background: undefined,
+    scrollOffset: 0,
+  })
+</script>

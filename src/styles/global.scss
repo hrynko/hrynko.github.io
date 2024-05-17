@@ -128,6 +128,20 @@ img {
   height: auto;
   border-radius: 8px;
   border: 2px solid rgb(var(--color-border));
+
+  &.medium-zoom-image {
+    transition-property: border, transform !important;
+
+    &--hidden {
+      border-color: transparent;
+      visibility: visible;
+    }
+
+    &--opened {
+      border-radius: 0;
+      border-color: transparent;
+    }
+  }
 }
 
 code {
@@ -155,6 +169,10 @@ blockquote {
 hr {
   border: none;
   border-top: 2px solid rgb(var(--color-border));
+}
+
+.medium-zoom-overlay {
+  background-color: rgb(var(--color-background));
 }
 
 .sr-only {
