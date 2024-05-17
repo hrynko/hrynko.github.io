@@ -30,7 +30,7 @@ jobs:
           node-version: 20
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@5
+        uses: actions/configure-pages@v5
       - name: Install dependencies
         run: npm ci
       - name: Build
@@ -39,7 +39,7 @@ jobs:
             --site "${{steps.pages.outputs.origin}}"
             --base "${{steps.pages.outputs.base_path}}"
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@3
+        uses: actions/upload-pages-artifact@v3
         with:
           path: dist
   deploy:
@@ -51,4 +51,4 @@ jobs:
     steps:
       - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@4
+        uses: actions/deploy-pages@v4
