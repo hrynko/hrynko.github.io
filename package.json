@@ -10,12 +10,12 @@
     "format": "prettier . --write --ignore-path .gitignore"
   },
   "dependencies": {
-    "@astrojs/check": "^0.4.1",
-    "@astrojs/mdx": "^2.1.0",
-    "@astrojs/sitemap": "^3.0.5",
-    "@fontsource/noto-sans": "^5.0.21",
-    "@playform/compress": "^0.0.4",
-    "astro": "^4.2.5",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^4.0.3",
+    "@astrojs/sitemap": "^3.2.1",
+    "@fontsource/noto-sans": "^5.1.0",
+    "@playform/compress": "^0.1.6",
+    "astro": "^5.1.1",
     "medium-zoom": "^1.1.0",
     "rehype-external-links": "^3.0.0"
   },

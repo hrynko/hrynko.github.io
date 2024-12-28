@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions'
+import { ClientRouter } from 'astro:transitions'
 
 import '../styles/global.scss'
 
@@ -38,4 +38,4 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 
-<ViewTransitions />
+<ClientRouter />
