@@ -1,5 +1,6 @@
 @import '@fontsource/noto-sans/400.css';
 @import '@fontsource/noto-sans/700.css';
+@import 'medium-zoom/dist/style.css';
 
 @import 'variables';
 @import 'mixins';
@@ -131,6 +132,7 @@ img {
 
   &.medium-zoom-image {
     transition-property: border, transform !important;
+    z-index: 10;
 
     &--hidden {
       border-color: transparent;
@@ -173,6 +175,7 @@ hr {
 
 .medium-zoom-overlay {
   background-color: rgb(var(--color-background));
+  z-index: 10;
 }
 
 .sr-only {
