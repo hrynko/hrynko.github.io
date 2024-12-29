@@ -23,10 +23,9 @@ const { Content } = await render(post)
 
 <script>
   import mediumZoom from 'medium-zoom/dist/pure'
-  document.addEventListener('astro:page-load', () => {
-    mediumZoom(document.querySelectorAll('article img'), {
-      background: undefined,
-      scrollOffset: 0,
-    })
+
+  mediumZoom(document.querySelectorAll('article img'), {
+    background: undefined,
+    scrollOffset: 0,
   })
 </script>
